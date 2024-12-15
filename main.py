@@ -76,7 +76,7 @@ def generate_html_files(assignments, participants, directory):
             <title>Secret Santa for {name}</title>
         </head>
         <body>
-            <h1>Secret Santa</h1>
+            <h1>{directory} Secret Santa</h1>
             <p><strong>Name:</strong> {name}</p>
             <p><strong>Group:</strong> {group}</p>
             <p><strong>Your Secret Santa Recipient:</strong> {recipient}</p>
