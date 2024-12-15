@@ -4,6 +4,8 @@ Ever tried running a Secret Santa game and someone has to be the brave soul to c
 
 This Python program facilitates the management of a Secret Santa game among friends or colleagues. It assigns participants within the same group to one another randomly and generates personalized HTML pages for each participant with their assignment. These HTML files can be shared via email or messaging apps, and allow the organizer to keep himself from seeing the pairings.
 
+FYI, aside from "demo," the directories above are actual games, so beware of what you click on. 
+
 ---
 
 ## Features
