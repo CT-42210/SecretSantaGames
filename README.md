@@ -59,43 +59,5 @@ secret_santa/
 
 ---
 
-## Program Details
-
-### Key Functionalities:
-- **`delete_old_data(directory)`**: Deletes existing game data upon user confirmation.
-- **`read_csv(file_path)`**: Reads the CSV file and parses participants' names and groups.
-- **`assign_recipients(participants)`**: Randomly assigns gift recipients within each group.
-- **`generate_html_files(assignments, participants, directory)`**: Creates personalized HTML files for each participant.
-
----
-
-## Customization
-- To change the output format or file structure, modify the `generate_html_files` function.
-- Update the `CSV_FILE` variable to point to a different CSV file for new games.
-
----
-
-## Troubleshooting
-
-1. **CSV File Not Found**:
-   - Ensure the file path specified in the `CSV_FILE` variable is correct.
-
-2. **No Participants Found**:
-   - Verify the CSV file is properly formatted and not empty.
-
-3. **Directory Already Exists**:
-   - If you want to reuse the same CSV file, confirm the deletion of old data when prompted.
-
----
-
-## License
-This program is provided "as-is" with no warranty. Feel free to modify and use it as needed.
-
----
-
-## Author
-Nick Troiano
----
-
 Happy gifting! 🎁
 
