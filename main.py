@@ -22,6 +22,8 @@ def delete_old_data(directory):
         if confirm not in ['y', 'n']:
             print("Invalid input. Please enter 'y' or 'n'.")
             delete_old_data(directory)
+    else:
+        pass
 
 
 def read_csv(file_path):
@@ -48,11 +50,17 @@ def assign_recipients(participants):
     assignments = {}
     for group, names in group_mapping.items():
         shuffled = names[:]
-        random.shuffle(shuffled)
+        max_attempts = 1000  # Maximum number of attempts to reshuffle
+        attempts = 0
+        while attempts < max_attempts:
+            random.shuffle(shuffled)
+            if all(giver != recipient for giver, recipient in zip(names, shuffled)):
+                break
+            attempts += 1
+        else:
+            raise ValueError(f"Unable to assign recipients for group '{group}' without self-assignment.")
+
         for giver, recipient in zip(names, shuffled):
-            while giver == recipient:  # Ensure no one is assigned to themselves
-                random.shuffle(shuffled)
-                recipient = shuffled[names.index(giver)]
             assignments[giver] = recipient
 
     return assignments
